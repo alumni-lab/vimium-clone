@@ -14,7 +14,6 @@ document.addEventListener("keydown", function(event) {
   }
 })
 
-
 // for (var i = 0; i < allTags.length; i++) {
 //   allTags[i].addEventListener('click', function() {
 //     var newAtt = this;
