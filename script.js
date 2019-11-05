@@ -27,4 +27,5 @@ chrome.pageAction.onClicked.addListener(function() {
   });
 });
 
+
 // on page load show the extension is present
