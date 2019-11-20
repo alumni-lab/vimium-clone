@@ -6,9 +6,14 @@ document.addEventListener("keydown", function(event) {
     // console.log("you typed f");
     for (var i = 0; i < allTags.length; i++) {
       var newAtt = allTags[i];
-      var tagText = newAtt.textContent;
-      var shortCut = document.createElement('h3');
-      shortCut.textContent = tagText;
+      // var tagText = newAtt.textContent;
+      var shortCut = document.createElement('div');
+      var span1 = document.createElement('span');
+      var span2 = document.createElement('span');
+      span1.textContent = "A";
+      span2.textContent = i;
+      shortCut.appendChild(span1);
+      shortCut.appendChild(span2);
       newAtt.appendChild(shortCut);
     }
   }
