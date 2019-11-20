@@ -10,11 +10,19 @@ document.addEventListener("keydown", function(event) {
       var shortCut = document.createElement('div');
       var span1 = document.createElement('span');
       var span2 = document.createElement('span');
+      // var script1 = document.createElement('script');
       span1.textContent = "A";
       span2.textContent = i;
       shortCut.appendChild(span1);
       shortCut.appendChild(span2);
-      newAtt.appendChild(shortCut);
+      // newAtt.appendChild(shortCut);
+      newAtt.insertAdjacentElement('afterend', shortCut);
+      document.addEventListener("keydown", function(event) {
+        if (event.which == 71) {
+          console.log("in 2nd event");
+          allTags[1].click();
+        }
+      })
     }
   }
 })
