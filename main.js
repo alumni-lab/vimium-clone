@@ -13,12 +13,7 @@ document.addEventListener("keydown", function(event) {
       span2.textContent = tagText.slice(0,1) + i;
       // span2.onclick(newAtt.click());
       span2.onclick = () => newAtt.click();
-      // span2.onclick = () => console.log("whoooo");
 
-      // function clickIt(newAtt) {
-      //   newAtt.click();
-      // }
-      // span2.onclick = clickIt;
       shortCut.appendChild(span2);
       newAtt.insertAdjacentElement('afterend', shortCut);
       displayArray.push(span2.textContent);
