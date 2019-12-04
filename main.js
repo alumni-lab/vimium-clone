@@ -36,6 +36,15 @@ document.addEventListener("keydown", function(event) {
         list = list.filter(key => key.includes(String.fromCharCode(letter)) );
       }
 
+      if (list.length <= 1) {
+        // const clickMe = document.documentElement.textContent(list[0]);
+        const clickMe = document.documentElement.textContent.indexOf(list[0]);
+        console.log(clickMe);
+        // const clickMe = document.documentElement.innerText()
+
+
+        clickMe.click();
+      }
       // let list = displayArray.filter(function(key) {
       //   return key.slice(keyCount, (keyCount + 1));
       //   key.
