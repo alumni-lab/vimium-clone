@@ -5,17 +5,21 @@ document.addEventListener("keydown", function(event) {
     var displayArray = [];
     var keyStrokes = [];
     for (var i = 0; i < allTags.length; i++) {
-      var newAtt = allTags[i];
+      const newAtt = allTags[i];
       var tagText = newAtt.textContent;
       var shortCut = document.createElement('div');
       var span2 = document.createElement('span');
 
       span2.textContent = tagText.slice(0,1) + i;
       // span2.onclick(newAtt.click());
-      span2.onclick = () => newAtt.click();
+      span2.onclick = () => {
+        newAtt.click();
+        // console.log(newAtt);
+        }
 
       shortCut.appendChild(span2);
       newAtt.insertAdjacentElement('afterend', shortCut);
+      // console.log(tagText);
       displayArray.push(span2.textContent);
     }
     document.addEventListener("keydown", function(e) {
