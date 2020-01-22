@@ -15,16 +15,16 @@ chrome.webNavigation.onCompleted.addListener(function() {
     // '
 // })
 });
+chrome.tabs.insertCSS({file: "styles.css"});
+
 
 chrome.pageAction.onClicked.addListener(function() {
   chrome.tabs.query(
     {active: true, currentWindow: true},
     function(tabs) {
       chrome.tabs.executeScript(
-      tabs[0].id,
-      {file: 'main.js'}
-    );
-  });
+        tabs[0].id,
+        {file: 'main.js'},
+      );
+    });
 });
-
-// on page load show the extension is present
