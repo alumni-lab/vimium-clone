@@ -38,7 +38,6 @@ document.addEventListener("keydown", function(event) {
       if (keyCount === 0) {
         list = displayArray.filter(key => key.startsWith(String.fromCharCode(letter)) );
       } else {
-        // list = list.filter(key => key.includes(String.fromCharCode(letter)) );
         list = displayArray.filter(key => key.startsWith(keyStrokes.join("")) );
 
       }
