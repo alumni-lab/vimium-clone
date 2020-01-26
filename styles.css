@@ -1,7 +1,10 @@
-.spanLink {
+.span-link {
   color: red;
 }
 
-.divLink {
+.div-link {
   background: yellow;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: inline;
 }
